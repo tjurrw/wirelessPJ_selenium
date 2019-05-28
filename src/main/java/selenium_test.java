@@ -4,8 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxProfile;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class selenium_test {
     public static void seleniumTest(){
@@ -14,6 +12,11 @@ public class selenium_test {
             WebDriver driver = new FirefoxDriver();
 
             driver.get("http://www.google.com");
+
+            WebElement changeSsid = driver.findElement(By.xpath("//*[@id=\"tsf\"]/div[2]/div/div[1]/div/div[1]/input"));
+            changeSsid.findElement(By.(""));
+            changeSsid.clear();
+            changeSsid.sendKeys("");
 
             Thread.sleep(5000);
 
